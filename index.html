@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QUIZ mania</title>
+    <--collegamento al css->
+	<link rel="stylesheet" href="./stile.css">
+</head>
+
+<body>
+
+<div id="schermata1">
+
+    <h1 class="cioccolato">PERCHE sei qua? Be' per quizzare!</h1>
+    <h2 class="battuta">e ascoltare le mie battute</h2>
+
+    <a class="bianco" id="inizioQuizBtn" onclick="document.getElementById('suonoInizio').play()">
+        Vuoi iniziare il quiz? cliccami!!
+    </a>
+
+    <hr/>
+
+    <p>Io ti avviso non cliccare quel bel bottone con scritto "Cliccami"</p>
+    <p>Questo è un cane, indovina il suo nome</p>
+
+    <br/>
+
+    <img src="./cane.jpg" onclick="document.getElementById('suono').play()">
+
+    <ol>
+        <a class="cioccolato" href="./video.html">Cliccami</a>
+        <li>Spolverone</li>
+        <li>Armandone il dormiglione</li>
+        <li>Antonietta la vecchietta</li>
+    </ol>
+	
+	<input type="text" id="campo" class="cioccolato2" placeholder="Indovina il nome del cane">
+    <button onclick="controlla()">Invia</button>
+
+    <p id="risultato"></p>
+
+    <-collegamenti suoni->
+	
+	<audio id="vittoria">
+        <source src="./vittoria.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="suono">
+        <source src="./sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="suonoInizio">
+        <source src="./transition.mp3" type="audio/mpeg">
+    </audio>
+
+	<-transizione scritta->
+    <div id="messaggioTransizione" style="
+        display:none;
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        color:white;
+        font-size:30px;
+        font-family:Impact;
+        text-align:center;
+        z-index:9999;
+    ">
+        Finito il tutorial<br>Buon quiz!
+	</div>
+
+
+
+</div>
+
+<-collegamento javascript->
+<script src="./script.js"></script>
+
+</body>
+</html>

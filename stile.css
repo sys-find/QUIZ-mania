@@ -1,0 +1,99 @@
+.cioccolato {
+    color: chocolate;
+    font-family: Impact;
+    text-align: center;
+}
+
+.cioccolato2 {
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.bianco {
+    color: gray;
+    font-family: cursive;
+    text-align: center;
+}
+
+.battuta {
+    font-size: 9px;
+    margin-top: 10px;
+}
+
+body {
+    background-color: #293d3d;
+    text-align: center;
+}
+
+input {
+    margin-top: 17px;
+}
+
+input, p {
+    font-weight: bold;
+}
+
+ol {
+    list-style-type: none;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.confetto {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: hsl(calc(360 * var(--i)), 80%, 60%);
+    pointer-events: none;
+}
+
+
+
+.esci-sinistra {
+    animation: slideLeft 0.8s ease forwards;
+}
+
+.scritta-veloce {
+    animation: slideLeftFast 0.35s ease forwards;
+}
+
+@keyframes slideLeft {
+    from { 
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+    to { 
+        transform: translateX(-150%); 
+        opacity: 0; 
+    }
+}
+
+/*animazione transizione*/
+.scritta-lenta {
+    animation: slideLeftSlow 2.5s ease forwards;
+}
+
+@keyframes slideLeftSlow {
+    from { 
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+    to { 
+        transform: translateX(-60%); 
+        opacity: 1; 
+    }
+}
+
+
+@keyframes slideLeftFast {
+    from { 
+        transform: translateX(-60%); 
+        opacity: 1; 
+    }
+    to { 
+        transform: translateX(-200%); 
+        opacity: 0; 
+    }
+}
